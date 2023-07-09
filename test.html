@@ -235,7 +235,9 @@
 </div>
 
 <hr>
-
+<style>
+.thing {display:none;}
+</style>
 <!-- Testimonials -->
 <div class="mobile">
 <div class="page-section resize">
@@ -248,7 +250,7 @@
   </div>
   <div class="container-fluid">
     <div class="owl-carousel stack-carousel mt-5 wow fadeInUp">
-      <div class="item">
+      <div class="thing">
         <!-- <div class="ratings fs-small py-3">
           <span class="icon mai-star"></span>
           <span class="icon mai-star"></span>
@@ -271,7 +273,7 @@
       </div>
       
 
-      <div class="item">
+      <div class="thing">
         <div class="caption">The Flowboat Entrepreneurship Club does a profound job bringing together the theory and applicability of business concepts. From participating in pitching competitions to receiving funding, the program is designed to educate through the best method: real experience. While the world of entrepreneurship can be demanding, the Flowboat program guides and perfects your entrepreneurial endeavours. For those hardworking and innovative individuals, Flowboat is the club for you!<br><br><br></div>
   
         <div class="avatar mt-3">
@@ -284,6 +286,31 @@
           </div>
         </div>
       </div>
+
+
+<!--w3bschools carrying hard frfr-->
+      <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+    </script>
     </div>
   </div>
 </div>
