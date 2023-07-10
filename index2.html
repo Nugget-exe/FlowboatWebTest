@@ -302,16 +302,35 @@
   </div>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
       $(document).ready(function(){
         var owl = $('.owl-carousel');
         owl.owlCarousel({
+          nav:true,
+          dots:false,
           items:3,
           loop:true,
           margin:10,
+          navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
           autoplay:true,
           autoplayTimeout:1000,
-          autoplayHoverPause:true
+          autoplayHoverPause:true,
+          responsive: {
+          0: {
+            items: 1,
+            loop: true
+          },
+          600: {
+            items: 2,
+            loop: true
+          },
+          1000: {
+            items: 3,
+            loop: true
+          }
+        }
         });
       })
 </script>
