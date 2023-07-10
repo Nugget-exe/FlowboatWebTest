@@ -290,28 +290,27 @@
 
 
 <!--w3bschools carrying hard frfr-->
-      <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+     
 
-      <script>
-      var slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("null");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";  
-        }
-        x[slideIndex-1].style.display = "block";  
-      }
-    </script>
+     <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
     </div>
   </div>
 </div>
