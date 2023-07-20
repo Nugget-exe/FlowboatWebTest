@@ -425,8 +425,43 @@
         </div>
             
         </div>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="container">
+          <h2 class="text-center wow" style="font-size: 50px; margin-bottom: 100px; margin-top: 100px;" >Phoyo</h2>
+<style>
+  .mySlides {display:none;}
+  </style>
 
+  <div class="text-center py-5 responsive"> 
+    <img class="mySlides" src = "assets/img/a.jpg">
+    <img class="mySlides" src = "assets/img/b.jpg">
+    <img class="mySlides" src = "assets/img/c.jpg">
+    <img class= "mySlides" src = "assets/img/d.jpg">
+  </div>  
 
+  <script> 
+  //rotating photos
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+  }
+  </script>
+
+        </div>
+      </div>
+</div>
 
  <div class="page-footer-section bg-dark fg-white">
   <div class="container">
